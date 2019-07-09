@@ -1,16 +1,15 @@
 ﻿import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }  from './app.component';
-import {AddEmployeeComponent} from './addemp';
-import {HttpClientModule} from '@angular/common/http';
-import {ShowemployeeComponent} from './showemp'
+import {Sortit}   from './app.sorting';
+
 @NgModule({ //decorator
     imports: [
-        BrowserModule, HttpClientModule
+        BrowserModule
         
     ],
     declarations: [
-        AppComponent, AddEmployeeComponent, ShowemployeeComponent
+        AppComponent, Sortit
 		],
     providers: [ ],
     bootstrap: [AppComponent]
