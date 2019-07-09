@@ -1,0 +1,21 @@
+<h3>Show all Employee</h3>
+
+<table border=1 >
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Department</th>
+    </tr>
+
+    <tr *ngFor="let blah of empA">
+      <td>{{blah.empId}}</td>
+      <td>{{blah.empName}}</td>
+      <td>{{blah.empSalary}}</td>
+      <td>{{blah.empDepartment}}</td>
+      <td><input type="button" value="delete" (click)=deleteemployee(em)/></td>
+      
+      
+    </tr>
+</table>
+<br><br>
