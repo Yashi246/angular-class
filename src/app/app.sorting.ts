@@ -5,12 +5,11 @@ import {Component} from '@angular/core';
     templateUrl: 'app.sortingstuff.html'
 })
  export class Sortit{
-
      empId:number;
      empName:string;
      empSalary:number;
      empDept:string;
-    empjoiningdate:Date;
+
      emp:any=[
          {empId:1001,empName:'Rahul',empSalary:9000,empDept:'JAVA',empjoiningdate:'6/12/2014'},
      {empId:1002,empName:'Vikash',empSalary:11000,empDept:'ORAAPS',empjoiningdate:'6/12/2017'},
@@ -20,24 +19,19 @@ import {Component} from '@angular/core';
      {empId:1006,empName:'Vishal',empSalary:17000,empDept:'BI',empjoiningdate:'9/12/2012'}
      
 ];
-
- sortid():any{
+ sortid(): any{
      this.emp=this.emp.sort((a,b)=>a.empId-b.empId);
  }
- sortsalary():any{
+ sortsalary(): any{
     this.emp=this.emp.sort((a,b)=>a.empSalary-b.empSalary);
 }
-sortname():any{
+sortname(): any{
     this.emp=this.emp.sort((a,b)=>a.empName.localeCompare(b.empName));
 }
-sortdept():any{
+sortdept(): any{
     this.emp=this.emp.sort((a,b)=>a.empDept.localeCompare(b.empDept));
 }
-sortjoindate():any{
-    this.emp=
-   this.emp.sort((a, b) => new Date(b.empjoiningdate).getTime() - new Date(a.empjoiningdate).getTime())
-    
-    ;
-}
+
 
 }
+

@@ -1,19 +1,9 @@
 <h2>the sorting game</h2>
-<table border= 8>
+<table border = 8>
     <tr>
-        <th><a (click)='sortid()'>Id</a></th>
-        <th><a (click)='sortsalary()'>Salary</a></th>
-        <th><a (click)='sortname()'>Name</a></th>
-        <th><a (click)='sortdept()'>Department</a></th>
-        <th><a (click)='sortjoindate()'>JoiningDate</a></th>
+        <th><a (click) ="sortid()">Id</a></th>
+        <th><a (click) =sortsalary()>Id</a></th>
+        <th><a (click) ="sortname()">Id</a></th>
+        <th><a (click) ="sortdept()">Id</a></th>
     </tr>
-    <tr *ngFor="let data of emp;let i=index">
-        <td>{{data.empId}}</td>
-        <td>{{data.empName}}</td>
-        <td>{{data.empSalary}}</td>
-        <td>{{data.empDept}}</td>
-        <td>{{data.empjoiningdate}}</td>
-        
-        
-      </tr>
 </table>
