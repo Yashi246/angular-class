@@ -7,8 +7,10 @@ import {EmployeeService} from './app.employee.service';
  export class showEmployeeComponent implements OnInit{
      constructor( private service:EmployeeService){}
      empA:any[];
+     
      ngOnInit(): any {
-        this.service.getAllEmployee().subscribe((data:any)=>this.empA=data);
+         this.empA = this.service.getAllEmployee();
+       // this.service.getAllEmployee((data:any)=>this.empA=data);
      }
      
  }

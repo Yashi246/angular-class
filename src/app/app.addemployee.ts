@@ -1,18 +1,25 @@
-import {Component,  OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {EmployeeService} from './app.employee.service';
- @Component({
-     selector: 'add-comp',
-     templateUrl:'add.html'
- })
- export class addEmployeeComponent implements OnInit{
-    
-     emp:any[];
-     constructor(private service:EmployeeService){}
-     ngOnInit(): any {
-        
+import {Router} from '@angular/router';
 
-        this.service.addDataEmployee().
+@Component({
+    selector: 'add-emp',
+    templateUrl: 'add.html'
+})
+export class addemployeeComponent{
+    constructor(private service:EmployeeService, private router:Router){}
+    myallData:any;
+    empId:string;
+    empSalary:number;
+    empDepartment:string;
+    empName:string;
+
+    addData(){
+        this.myallData={empId:this.empId, empName:this.empName, empSalary:this.empSalary, empDepartment:this.empDepartment};
+        if(this.service.addEmployee(this.myallData)){
+        this.router.navigate(['show']);
+
+         }
+        alert("hello")
     }
-     
-   
- }}
+}
